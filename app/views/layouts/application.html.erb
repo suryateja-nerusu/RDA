@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RDA</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= action_cable_meta_tag %>
+  </head>
+
+  <body>
+      <nav class="navbar navbar-fixed-top navbar-inverse">
+        <%= link_to "Draw app", '#', id: "logo" %>
+          <p class="navbar-text navbar-right" style="color: white"> UserName : <%= link_to ApplicationHelper.gen_name,'#' %></p>
+      </nav>
+    <%= yield %>
+  </body>
+</html>
